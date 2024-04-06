@@ -92,6 +92,9 @@ class AssetManger{
   static const String clinicVisitIcon ='assets/images/clinic_visit.png';
   static const String cameraBookIcon ='assets/images/cameraBook.svg';
   static const String galleryBookIcon ='assets/images/galleryBook.svg';
+  static const String requestIcon ='assets/images/request.svg';
+  static const String search2Icon ='assets/images/search2.svg';
+
 
 
 }

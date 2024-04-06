@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../shared/resources/color_manger.dart';
-import '../../scan_screen/widget/row_location.dart';
+
 import '../widget/discount_container.dart';
 import '../widget/discount_row.dart';
 import '../widget/get_shamel_expansion.dart';
@@ -25,8 +25,8 @@ class ShamelScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 15.h,),
-      
-            RowLocation(),
+
+            CustomRowLocation(),
             SizedBox(height: 20.h,),
             PercentRow(),
             SizedBox(height: 20.h,),

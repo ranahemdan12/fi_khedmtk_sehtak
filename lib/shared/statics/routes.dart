@@ -23,19 +23,22 @@ class Routes {
   static const String paymentScreen= "/payment";
   static const String pointsScreen= "/points";
   static const String helpScreen= "/help";
-  static const String clinicServicesScreen= "/clinic";
+  static const String inClinicServicesScreen= "/clinic";
   static const String dermatologyScreen= "/dermatology";
   static const String dentistryScreen= "/dentistry";
   static const String scanScreen= "/scan";
   static const String addPresScreen= "/addPresc";
   static const String selectAreaScreen= "/area";
-  static const String labsDetailsScreen= "/labsDetails";
-  static const String serviceProviderScreen= "/serviceProvider";
+  static const String labsProvidersScreen= "/labsProviders";
+  static const String searchInClinicScreen= "/searchInClinic";
+
+
   static const String clinicsDetailsScreen= "/clinicDetails";
   static const String doctorProfileScreen= "/doctorProfile";
   static const String selectCityScreen= "/selectCity";
   static const String selectAreaInScreen= "/selectAreaIn";
   static const String shamelScreen= "/shamel";
+  static const String homeVisitsScreen= "/homeVisits";
 
 
 

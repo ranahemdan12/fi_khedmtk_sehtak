@@ -6,9 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 
-import '../resources/asset_manger.dart';
+
 import '../resources/color_manger.dart';
 import '../resources/strings_manger.dart';
+
 
 class CustomServiceItem extends StatelessWidget {
   CustomServiceItem({
@@ -23,7 +24,7 @@ class CustomServiceItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 159.w,
+      width: 161.w,
       height: 150.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -253,178 +254,73 @@ class CustomButton extends StatelessWidget {
   }
 }
 
-class CustomServiceContainer extends StatelessWidget {
-  CustomServiceContainer({
-    Key? key,
-    required this.text1,
-    required this.richText1,
-    required this.richText2,
-    required this.richText3,
-    required this.richText4,
-  }) : super(key: key);
+class CustomRowLocation extends StatelessWidget{
+  const CustomRowLocation({Key? key}) : super(key: key);
 
-  String text1;
-  String richText1;
-  String richText2;
-  String richText3;
-  String richText4;
-
+  // final List<String> items = [
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 338.w,
-      height: 79.h,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: ColorManger.blueColor,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(StringManger.searchingIn,
+          style: GoogleFonts.montserrat(
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w600,
+            color: ColorManger.labelGrayColor,
+          ),
         ),
-        borderRadius: BorderRadius.circular(4),
-      ),
-      child: Padding(
-        padding: EdgeInsetsDirectional.only(start: 8, end: 15),
-        child: Row(
-          children: [
-            Padding(
-                padding: EdgeInsetsDirectional.only(top: 35),
-                child: Image.asset(AssetManger.coinIcon)),
-            SizedBox(
-              width: 5.w,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      text1,
-                      style: GoogleFonts.montserrat(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w600,
-                        color: ColorManger.blackColor,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 60.w,
-                    ),
-                    GestureDetector(
-                        onTap: () {
-                          ShowSheet(context);
-                        },
-                        child: SvgPicture.asset(AssetManger.plusIcon)),
-                  ],
-                ),
-                SizedBox(
-                  height: 3.h,
-                ),
-                RichText(
-                  text: TextSpan(
-                    text: richText1,
-                    style: GoogleFonts.montserrat(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w500,
-                      color: ColorManger.blackColor,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: richText2,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w500,
-                          color: ColorManger.blueColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 3.h,
-                ),
-                RichText(
-                  text: TextSpan(
-                    text: richText3,
-                    style: GoogleFonts.montserrat(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w500,
-                      color: ColorManger.blackColor,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: richText4,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w500,
-                          color: ColorManger.redColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+        Text('Giza, El-Dokki',
+          style: GoogleFonts.montserrat(
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w500,
+            color: ColorManger.redColor,
+          ),),
+        IconButton(onPressed: (){ Navigator.pushNamed(context, Routes.selectCityScreen);}, icon: Icon(Icons.arrow_drop_down)),
+
+        // DropdownButtonHideUnderline(
+        //   child: DropdownButton(
+        //     hint: Text('Giza, El-Dokki',
+        //       style: GoogleFonts.montserrat(
+        //         fontSize: 14.sp,
+        //         fontWeight: FontWeight.w500,
+        //         color: ColorManger.redColor,
+        //       ),),
+        //
+        //     items: items
+        //         .map((String item) => DropdownMenuItem<String>(
+        //       value: item,
+        //       child: Padding(
+        //         padding:EdgeInsetsDirectional.only(start: 2),
+        //         child: Text(
+        //           item,
+        //           style: GoogleFonts.montserrat(
+        //             fontSize: 14.sp,
+        //             fontWeight: FontWeight.w600,
+        //             color: ColorManger.blueColor,
+        //           ),
+        //           overflow: TextOverflow.ellipsis,
+        //         ),
+        //       ),
+        //     ))
+        //         .toList(),
+        //     value: selectedValue,
+        //     onChanged: (String? value) {
+        //       setState(() {
+        //         selectedValue = value!;
+        //       });
+        //     },
+        //
+        //   ),
+        // ),
+
+      ],
     );
   }
+
 }
 
-void ShowSheet(context) {
-  showModalBottomSheet(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(25.0),
-        ),
-      ),
-      context: context,
-      builder: (BuildContext context) {
-        return Container(
-          height: 274.h,
-          width: 389.w,
-          child: Column(
 
-            children: [
-              SizedBox(
-                height: 33.h,
-              ),
-              CustomServiceContainer(
-                text1: 'Blood Urea (Urea or BUN )',
-                richText1: 'In case of cash ',
-                richText2: '200 EGP',
-                richText3: 'Booking through the application is ',
-                richText4: '50 EGP ',
-              ),
-              SizedBox(
-                height: 32.h,
-              ),
-              Row(
-               mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                SvgPicture.asset(AssetManger.plus2Icon),
-                Text('Add Other Services',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w600,
-                    color: ColorManger.blueColor,
-                  ),),
-              ],),
-              SizedBox(
-                height: 31.h,
-              ),
-              Padding(
-                padding:EdgeInsetsDirectional.symmetric(horizontal: 25),
-                child: CustomButton(text: StringManger.chooseServiceProvider, onPressed:(){
-                  Navigator.pushNamed(context, Routes.serviceProviderScreen);
-                }),
 
-              ),
-              SizedBox(
-                height: 17.h,
-              ),
 
-            ],
-          ),
-
-        );
-      });
-}
 

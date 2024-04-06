@@ -11,7 +11,7 @@ import '../../../shared/statics/reusable_component.dart';
 
 import '../../../shared/statics/routes.dart';
 
-import '../widget/row_location.dart';
+
 import '../widget/scan_container.dart';
 import '../widget/works_container.dart';
 
@@ -27,7 +27,7 @@ class ScanScreen extends StatelessWidget {
           child: Column(
                 children: [
                   SizedBox(height: 21.h,),
-                  RowLocation(),
+                  CustomRowLocation(),
               SizedBox(height: 21.h,),
                ScanContainer(svgPic: AssetManger.bookPresIcon, text: StringManger.bookBy,onTab2: (){showAlertDialog(context);},),
                   SizedBox(height: 9.h,),

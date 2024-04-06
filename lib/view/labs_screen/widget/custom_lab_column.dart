@@ -15,16 +15,23 @@ class CustomLabsColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsetsDirectional.symmetric(horizontal: 26),
+      padding:  EdgeInsetsDirectional.symmetric(horizontal: 23),
       child: Column(
         children: [
           SizedBox(height: 35.h,),
           Row(
             children: [
-              CustomServiceItem(svgImage: AssetManger.clinicServicesIcon, text: StringManger.homeVisits),
+              GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, Routes.homeVisitsScreen);
+                  },
+                  child: CustomServiceItem(svgImage: AssetManger.clinicServicesIcon, text: StringManger.homeVisits)),
               SizedBox(width: 19.w,),
               GestureDetector(
-                onTap: (){Navigator.pushNamed(context, Routes.labsDetailsScreen);},
+                onTap: (){
+                  Navigator.pushNamed(context, Routes.labsProvidersScreen);
+                },
+
 
                   child: CustomServiceItem(svgImage: AssetManger.visitLabsIcon, text: StringManger.labs)),
             ],

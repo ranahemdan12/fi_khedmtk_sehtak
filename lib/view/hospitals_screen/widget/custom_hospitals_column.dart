@@ -12,13 +12,13 @@ class CustomHospitalsColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.symmetric(horizontal: 26),
+      padding: EdgeInsetsDirectional.symmetric(horizontal: 24),
       child: Column(
         children: [
           SizedBox(height: 35.h,),
           Row(children: [
-            GestureDetector(onTap: (){Navigator.pushNamed(context, Routes.clinicServicesScreen);},
-                child: CustomServiceItem(svgImage: AssetManger.clinicServicesIcon, text: StringManger.clinicsServices)),
+            GestureDetector(onTap: (){Navigator.pushNamed(context, Routes.inClinicServicesScreen);},
+                child: CustomServiceItem(svgImage: AssetManger.clinicServicesIcon, text: StringManger.inClinicsServices)),
             SizedBox(width: 19.w,),
             CustomServiceItem(svgImage: AssetManger.operationsIcon, text: StringManger.operations),
           ],),

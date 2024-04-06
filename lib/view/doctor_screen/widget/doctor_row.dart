@@ -11,7 +11,7 @@ class DoctorRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsetsDirectional.only(start: 26,end: 26,top: 35),
+      padding:  EdgeInsetsDirectional.only(start: 24,end: 24,top: 35),
       child: Row(children: [
 
        GestureDetector(

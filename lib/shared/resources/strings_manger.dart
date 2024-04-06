@@ -52,7 +52,7 @@ class StringManger{
   static const String orthopedics= 'Orthopedics';
   static const String internalMedical = 'InternalMedical';
   static const String scan = 'Scan';
-  static const String clinicsServices = 'ClinicsServices';
+  static const String inClinicsServices = 'In-clinic services';
   static const String operations = 'Operations';
   static const String homeVisits = 'Home Visits';
   static const String titlePackageItem = 'Package of child health tests and examinations';
@@ -71,6 +71,7 @@ class StringManger{
   static const String ourChild = 'Our children are the most precious thing to us,which is why we constantly need to make sureof their health. Please reassure me about yourchild if they are experiencing any symptomslike headaches, stomachaches, inflammationallergies, or fever';
   static const String bookmdz = 'Book now from Mednza for the best price -Child Health Tests from the best lab.';
   static const String theBest = 'The best laboratories for tests in Egypt.Book now.';
+  static const String search = 'Search';
 
   static const String avilable = 'Avaliable offers in';
   static const String numOfServices= 'Number OF Services:';
@@ -123,7 +124,7 @@ class StringManger{
   static const String selectArea = 'Select Area';
   static const String confirmAndContinue = 'Confirm and Continue';
   static const String chooseServiceProvider = 'Choose Service Provider';
-  static const String serviceProvider = 'Service Provider';
+
   static const String bestPrice = 'Best Price';
   static const String mostRated = 'Most Rated';
   static const String consultationFees = 'Consultation Fees';
@@ -152,7 +153,7 @@ class StringManger{
   static const String callSupport= 'Call Support';
   static const String discountShamel= 'Discounts up to 40% with Shamel .';
   static const String details= 'Details';
-  static const String howItWorks= 'How it works';
+  static const String howItWorks= 'How it works ?';
   static const String chooseArea= 'Choose your area';
   static const String addScans= 'Add your scans';
   static const String selectScans= 'Select Scans center';
@@ -166,6 +167,12 @@ class StringManger{
   static const String close= 'Close';
   static const String plans= 'Plans';
   static const String proceed= 'Proceed';
+  static const String requestBy= 'Request by Prescription';
+  static const String uploadImage= 'Upload Prescription image';
+  static const String labsProviders= 'Labs Providers';
+
+
+
 
 
 
