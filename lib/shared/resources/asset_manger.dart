@@ -80,6 +80,18 @@ class AssetManger{
   static const String doctorsIcon ='assets/images/doctor_icon.svg';
   static const String whiteStarsIcon ='assets/images/white_stars.svg';
   static const String visitLabsIcon ='assets/images/visit.svg';
+  static const String bookPresIcon ='assets/images/bookPres.svg';
+  static const String callSuppIcon ='assets/images/call_support.svg';
+  static const String discountIcon ='assets/images/discount.svg';
+  static const String oneIcon ='assets/images/one.svg';
+  static const String twoIcon ='assets/images/two.svg';
+  static const String threeIcon ='assets/images/three.svg';
+  static const String fourIcon ='assets/images/four.svg';
+  static const String fiveIcon ='assets/images/five.svg';
+  static const String percentIcon ='assets/images/percent.png';
+  static const String clinicVisitIcon ='assets/images/clinic_visit.png';
+  static const String cameraBookIcon ='assets/images/cameraBook.svg';
+  static const String galleryBookIcon ='assets/images/galleryBook.svg';
 
 
 }

@@ -16,7 +16,7 @@ class ServiceRow extends StatelessWidget {
       child: Row(
         children: [
           GestureDetector(onTap: (){
-            Navigator.pushNamed(context,Routes.selectCityScreen);
+            Navigator.pushNamed(context,Routes.doctorScreen);
           },
               child: ServiceRowItem(svgImage: AssetManger.doctorIcon, text: StringManger.doctor)),
           SizedBox(width: 7.w,),

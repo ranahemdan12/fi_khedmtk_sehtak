@@ -148,6 +148,25 @@ class StringManger{
   static const String doctorProfile= 'Doctor Profile';
   static const String selectCity= 'Select City';
   static const String selectAreaIn= 'Select Area IN ';
+  static const String bookBy= 'Book by Prescription';
+  static const String callSupport= 'Call Support';
+  static const String discountShamel= 'Discounts up to 40% with Shamel .';
+  static const String details= 'Details';
+  static const String howItWorks= 'How it works';
+  static const String chooseArea= 'Choose your area';
+  static const String addScans= 'Add your scans';
+  static const String selectScans= 'Select Scans center';
+  static const String readService= 'Read service preparation';
+  static const String selectDate= 'Select Date';
+  static const String searchingIn= 'Searching in ';
+  static const String shamel= 'Shamel ';
+  static const String medicalDiscounts= 'Medical Discounts ';
+  static const String frequently= 'Frequently Asked Questions ';
+  static const String selectPlan= 'Select Plan';
+  static const String close= 'Close';
+  static const String plans= 'Plans';
+  static const String proceed= 'Proceed';
+
 
 
 

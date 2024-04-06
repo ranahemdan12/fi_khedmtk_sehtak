@@ -4,6 +4,7 @@ import 'package:fi_khedmtk_sehtak/view/detection_screen/screen/detection_screen.
 import 'package:fi_khedmtk_sehtak/view/doctor_profile_screen/screen/doctor_profile_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/select_area_in_screen/screen/select_area_in_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/select_city_screen/screen/select_city_screen.dart';
+import 'package:fi_khedmtk_sehtak/view/shamel_screen/screen/shamel_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 
@@ -180,6 +181,10 @@ class RoutesManger {
       case Routes.detectionScreen:
         return CupertinoPageRoute(
             builder: (_) => const DetectionScreen(), settings: routeSettings);
+
+      case Routes.shamelScreen:
+        return CupertinoPageRoute(
+            builder: (_) => const ShamelScreen(), settings: routeSettings);
 
     }
   }

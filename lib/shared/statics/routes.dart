@@ -35,6 +35,7 @@ class Routes {
   static const String doctorProfileScreen= "/doctorProfile";
   static const String selectCityScreen= "/selectCity";
   static const String selectAreaInScreen= "/selectAreaIn";
+  static const String shamelScreen= "/shamel";
 
 
 

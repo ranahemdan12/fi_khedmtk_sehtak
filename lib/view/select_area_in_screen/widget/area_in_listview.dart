@@ -15,7 +15,7 @@ class AreaInListView extends StatelessWidget {
       scrollDirection: Axis.vertical,
       itemBuilder: ( context,  index) => GestureDetector(
         onTap: (){
-          Navigator.pushNamed(context, Routes.doctorScreen);
+
         },
         child: Padding(
           padding:  EdgeInsetsDirectional.only(top: 17,start: 26,end: 26),
