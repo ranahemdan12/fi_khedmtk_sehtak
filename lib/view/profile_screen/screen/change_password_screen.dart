@@ -20,25 +20,27 @@ class ChangeCurrentPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScreen(text: StringManger.profile, body: Padding(
       padding:EdgeInsetsDirectional.symmetric(horizontal: 26),
-      child: Column(
-       crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 34.h,),
-          ProfileText(),
-          ProfileSubTitleText(),
-          SizedBox(height: 54.h,),
-          ChangePasswordText(),
-          SizedBox(height: 29.h,),
-          CustomTextField(text: StringManger.currentPassword, keyboardType: TextInputType.text, textEditingController: currentPassController, hintText: StringManger.currentPassword),
-          SizedBox(height: 29.h,),
-          CustomTextField(text: StringManger.newPassword, keyboardType: TextInputType.text, textEditingController: newPassController, hintText: StringManger.newPassword),
-          SizedBox(height: 29.h,),
-          CustomTextField(text: StringManger.confirmNewPassword, keyboardType: TextInputType.text, textEditingController: confirmPassController, hintText: StringManger.confirmNewPassword),
-          SizedBox(height: 64.h,),
-          CustomButton(text: StringManger.changePassword, onPressed: (){
-
-          }),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+         crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 34.h,),
+            ProfileText(),
+            ProfileSubTitleText(),
+            SizedBox(height: 54.h,),
+            ChangePasswordText(),
+            SizedBox(height: 29.h,),
+            CustomTextField(text: StringManger.currentPassword, keyboardType: TextInputType.text, textEditingController: currentPassController, hintText: StringManger.currentPassword),
+            SizedBox(height: 29.h,),
+            CustomTextField(text: StringManger.newPassword, keyboardType: TextInputType.text, textEditingController: newPassController, hintText: StringManger.newPassword),
+            SizedBox(height: 29.h,),
+            CustomTextField(text: StringManger.confirmNewPassword, keyboardType: TextInputType.text, textEditingController: confirmPassController, hintText: StringManger.confirmNewPassword),
+            SizedBox(height: 64.h,),
+            CustomButton(text: StringManger.changePassword, onPressed: (){
+        
+            }),
+          ],
+        ),
       ),
     ));
   }

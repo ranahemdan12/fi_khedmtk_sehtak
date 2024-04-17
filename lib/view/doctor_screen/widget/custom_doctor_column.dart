@@ -13,7 +13,7 @@ class CustomDetectionColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsetsDirectional.symmetric(horizontal: 26),
+      padding:  EdgeInsetsDirectional.symmetric(horizontal: 23),
       child: Column(
         children: [
           SizedBox(height: 35.h,),

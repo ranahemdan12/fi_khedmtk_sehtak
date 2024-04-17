@@ -20,7 +20,9 @@ class CustomHospitalsColumn extends StatelessWidget {
             GestureDetector(onTap: (){Navigator.pushNamed(context, Routes.inClinicServicesScreen);},
                 child: CustomServiceItem(svgImage: AssetManger.clinicServicesIcon, text: StringManger.inClinicsServices)),
             SizedBox(width: 19.w,),
-            CustomServiceItem(svgImage: AssetManger.operationsIcon, text: StringManger.operations),
+            GestureDetector(
+              onTap: (){ Navigator.pushNamed(context, Routes.operationsScreen);},
+                child: CustomServiceItem(svgImage: AssetManger.operationsIcon, text: StringManger.operations)),
           ],),
 
           ],),
