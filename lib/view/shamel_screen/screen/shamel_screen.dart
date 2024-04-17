@@ -2,8 +2,10 @@ import 'package:fi_khedmtk_sehtak/shared/resources/strings_manger.dart';
 import 'package:fi_khedmtk_sehtak/shared/statics/reusable_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../shared/resources/asset_manger.dart';
 import '../../../shared/resources/color_manger.dart';
 
 import '../widget/discount_container.dart';
@@ -19,7 +21,8 @@ class ShamelScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScreen(text: StringManger.shamel, body:SingleChildScrollView(
+    return CustomScreen(text: StringManger.shamel,
+        actionWidget:  IconButton(onPressed: (){},icon: SvgPicture.asset(AssetManger.searchIcon),),body:SingleChildScrollView(
       child: Padding(
         padding: EdgeInsetsDirectional.only(start: 26,end: 26),
         child: Column(

@@ -1,37 +1,32 @@
 import 'package:fi_khedmtk_sehtak/shared/statics/routes.dart';
+import 'package:fi_khedmtk_sehtak/view/book_home_visit/screen/book_home_visit_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/clinic_details_screen/screen/clinic_details_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/detection_screen/screen/detection_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/doctor_profile_screen/screen/doctor_profile_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/labs_provider_screen/screen/labs_provider_screen.dart';
-
 import 'package:fi_khedmtk_sehtak/view/select_area_in_screen/screen/select_area_in_screen.dart';
 import 'package:fi_khedmtk_sehtak/view/select_city_screen/screen/select_city_screen.dart';
+import 'package:fi_khedmtk_sehtak/view/service_provider/screen/service_provider.dart';
 import 'package:fi_khedmtk_sehtak/view/shamel_screen/screen/shamel_screen.dart';
 import 'package:flutter/cupertino.dart';
-
-
-
 import '../../view/about_screen/screen/about_screen.dart';
 import '../../view/add_prescription/screen/add_prescription.dart';
 import '../../view/bottom_main_screen/main_screen.dart';
 import '../../view/cart_screen/screen/cart_screen.dart';
-
 import '../../view/contact_us_screen/screen/contact_screen.dart';
 import '../../view/dentistry_screen/screen/dentistry_screen.dart';
 import '../../view/dermatology_screen/screen/dermatology_screen.dart';
-
 import '../../view/doctor_screen/screen/doctor_screen.dart';
 import '../../view/help_screen/screen/help_screen.dart';
 import '../../view/home_visit_screen/screen/home_visits_screen.dart';
 import '../../view/hospitals_screen/screen/hospitals_screen.dart';
-
 import '../../view/in_clinc_services/screen/search_in_clinics.dart';
 import '../../view/in_clinc_services/screen/in_clinic_services.dart';
 import '../../view/labs_screen/screen/labs_screen.dart';
 import '../../view/language_screen/screen/lang_screen.dart';
 import '../../view/login_screen/screen/login_screen.dart';
-
 import '../../view/onboarding_screen/screen/onBoarding_Screen.dart';
+import '../../view/operations_screen/screen/opetations_screen.dart';
 import '../../view/package_item_screen/screen/package_item_screen.dart';
 import '../../view/packages_screen/screen/packages_screen.dart';
 import '../../view/payment_screen/screen/payment_screen.dart';
@@ -41,9 +36,9 @@ import '../../view/profile_screen/screen/change_password_screen.dart';
 import '../../view/profile_screen/screen/profile_screen.dart';
 import '../../view/scan_screen/screen/scan_screen.dart';
 import '../../view/select_area_screen/screen/select_area_screen.dart';
-
 import '../../view/service_screen/screen/service_screen.dart';
 import '../../view/signup_screen/screen/signup_screen.dart';
+import '../../view/success_home_visit_booking/screen/success_home_visit_booking.dart';
 import '../../view/terms_screen/screen/terms_screen.dart';
 import '../../view/visit_screen/screen/visit_screen.dart';
 
@@ -197,6 +192,23 @@ class RoutesManger {
       case Routes.searchInClinicScreen:
         return CupertinoPageRoute(
             builder: (_) =>  SearchInClinics(), settings: routeSettings);
+
+
+      case Routes.operationsScreen:
+        return CupertinoPageRoute(
+            builder: (_) =>  OperationsScreen(), settings: routeSettings);
+
+      case Routes.serviceProviderScreen:
+        return CupertinoPageRoute(
+            builder: (_) =>  ServiceProvider(), settings: routeSettings);
+
+      case Routes.bookHomeVisitScreen:
+        return CupertinoPageRoute(
+            builder: (_) =>  BookHomeVisitScreen(), settings: routeSettings);
+
+      case Routes.successBookHomeVisitScreen:
+        return CupertinoPageRoute(
+            builder: (_) => SuccessHomeVisitBooking(), settings: routeSettings);
 
     }
   }

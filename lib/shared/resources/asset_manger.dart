@@ -23,6 +23,8 @@ class AssetManger{
   static const String orderAnimation ='assets/images/Animation - 1705739579982 3.png';
   static const String dentistryIcon ='assets/images/dentistry.svg';
   static const String cameraIcon ='assets/images/camera.svg';
+  static const String bookVisit ='assets/images/book visit.png';
+  static const String successBookVisit ='assets/images/success_booking.png';
 
   static const String analysisIcon ='assets/images/analysis.svg';
   static const String paperIcon ='assets/images/Humaaans - Paperwork 1.png';

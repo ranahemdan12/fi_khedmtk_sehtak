@@ -72,6 +72,11 @@ class StringManger{
   static const String bookmdz = 'Book now from Mednza for the best price -Child Health Tests from the best lab.';
   static const String theBest = 'The best laboratories for tests in Egypt.Book now.';
   static const String search = 'Search';
+  static const String bookVisitDoctor = 'Book a Home Visit Doctor';
+  static const String bookVisit = 'Book a Home Visit ';
+  static const String bookText1 = 'Through the At Your Service Your Health  application, you can book a home visit with a specialist doctor';
+  static const String bookText2 = 'Please enter your information, and we will contact you within minutes';
+
 
   static const String avilable = 'Avaliable offers in';
   static const String numOfServices= 'Number OF Services:';
@@ -170,6 +175,11 @@ class StringManger{
   static const String requestBy= 'Request by Prescription';
   static const String uploadImage= 'Upload Prescription image';
   static const String labsProviders= 'Labs Providers';
+  static const String specialization= 'Specialization';
+  static const String region= 'Region';
+  static const String booking= 'Booking';
+  static const String thankYou= 'Thank You';
+  static const String willBeContacted= 'You will be contacted within minutes';
 
 
 

@@ -31,14 +31,16 @@ class Routes {
   static const String selectAreaScreen= "/area";
   static const String labsProvidersScreen= "/labsProviders";
   static const String searchInClinicScreen= "/searchInClinic";
-
-
+  static const String operationsScreen= "/operations";
   static const String clinicsDetailsScreen= "/clinicDetails";
   static const String doctorProfileScreen= "/doctorProfile";
   static const String selectCityScreen= "/selectCity";
   static const String selectAreaInScreen= "/selectAreaIn";
   static const String shamelScreen= "/shamel";
   static const String homeVisitsScreen= "/homeVisits";
+  static const String serviceProviderScreen= "/serviceProvider";
+  static const String bookHomeVisitScreen= "/bookHomeVisit";
+  static const String successBookHomeVisitScreen= "/successBookHomeVisit";
 
 
 

@@ -80,6 +80,7 @@ class CustomScreen extends StatelessWidget {
 
 
       appBar: AppBar(
+        titleSpacing: 0,
         iconTheme: IconThemeData(
           color: ColorManger.whiteColor,
         ),
@@ -140,28 +141,31 @@ class CustomTextField extends StatelessWidget {
         SizedBox(
           height: 9.h,
         ),
-        TextField(
-          keyboardType: keyboardType,
-          controller: textEditingController,
-          decoration: InputDecoration(
-            contentPadding:
-                EdgeInsetsDirectional.only(start: 25, top: 15, bottom: 15),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: ColorManger.blueColor, width: 1),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: ColorManger.blueColor, width: 1),
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            fillColor: ColorManger.whiteGColor,
-            filled: true,
-            hintText: hintText,
-            hintStyle: GoogleFonts.montserrat(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w500,
-              color: ColorManger.labelGrayColor,
+        Container(
+          height: 60.h,
+          child: TextField(
+            keyboardType: keyboardType,
+            controller: textEditingController,
+            decoration: InputDecoration(
+              contentPadding:
+                  EdgeInsetsDirectional.only(start: 25, top: 15, bottom: 15),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: ColorManger.blueColor, width: 1),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: ColorManger.blueColor, width: 1),
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              fillColor: ColorManger.whiteGColor,
+              filled: true,
+              hintText: hintText,
+              hintStyle: GoogleFonts.montserrat(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w500,
+                color: ColorManger.labelGrayColor,
+              ),
             ),
           ),
         ),
@@ -190,7 +194,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50.h,
+      height: 60.h,
       child: TextFormField(
         validator: validate,
         keyboardType: keyboardType,

@@ -1,14 +1,15 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../shared/resources/asset_manger.dart';
 import '../../../shared/resources/strings_manger.dart';
 import '../../../shared/statics/reusable_component.dart';
 import '../../../shared/statics/routes.dart';
 
-class CustomDetectionColumn extends StatelessWidget {
-  const CustomDetectionColumn({Key? key}) : super(key: key);
+class CustomVisitColumn extends StatelessWidget {
+  const CustomVisitColumn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class CustomDetectionColumn extends StatelessWidget {
         children: [
           SizedBox(height: 35.h,),
           Row(children: [
-            GestureDetector(onTap: (){Navigator.pushNamed(context, Routes.dermatologyScreen);},
+            GestureDetector(onTap: (){Navigator.pushNamed(context, Routes.bookHomeVisitScreen);},
                 child: CustomServiceItem(svgImage: AssetManger.dermatologyIcon, text: StringManger.dermatology)),
             SizedBox(width: 19.w,),
             CustomServiceItem(svgImage: AssetManger.neurologyIcon, text: StringManger.neurology),
