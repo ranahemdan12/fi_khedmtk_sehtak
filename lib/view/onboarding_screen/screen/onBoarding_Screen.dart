@@ -1,7 +1,9 @@
+import 'package:fi_khedmtk_sehtak/shared/statics/shared_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 import '../../../shared/resources/asset_manger.dart';
@@ -91,8 +93,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(context, Routes.loginScreen, (route) => false);
+                      onPressed: () async {
+                        CacheHelper.saveData(key: 'onBoarding', value: true).then((value) => {
+                          if(value!){
+
+                            Navigator.pushNamedAndRemoveUntil(context, Routes.loginScreen, (route) => false),
+                          }
+                        });
+
                       },
                       child: Text(
                         StringManger.skip,

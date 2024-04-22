@@ -19,6 +19,9 @@ import '../../view/dermatology_screen/screen/dermatology_screen.dart';
 import '../../view/doctor_screen/screen/doctor_screen.dart';
 import '../../view/help_screen/screen/help_screen.dart';
 import '../../view/home_visit_screen/screen/home_visits_screen.dart';
+import '../../view/hospitals_screen/screen/hospitals_named_screen.dart';
+
+import '../../view/hospitals_screen/screen/hospitals_named_screen.dart';
 import '../../view/hospitals_screen/screen/hospitals_screen.dart';
 import '../../view/in_clinc_services/screen/search_in_clinics.dart';
 import '../../view/in_clinc_services/screen/in_clinic_services.dart';
@@ -209,6 +212,11 @@ class RoutesManger {
       case Routes.successBookHomeVisitScreen:
         return CupertinoPageRoute(
             builder: (_) => SuccessHomeVisitBooking(), settings: routeSettings);
+
+      case Routes.hospitalsNamesScreen:
+        return CupertinoPageRoute(
+            builder: (_) => HospitalsNamesScreen(), settings: routeSettings);
+
 
     }
   }

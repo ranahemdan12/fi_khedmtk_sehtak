@@ -194,7 +194,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60.h,
+      height: 90.h,
       child: TextFormField(
         validator: validate,
         keyboardType: keyboardType,
@@ -211,6 +211,7 @@ class CustomTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           fillColor: ColorManger.whiteColor,
+          counterText: ' ',
           filled: true,
           hintText: hintText,
           hintStyle: GoogleFonts.montserrat(

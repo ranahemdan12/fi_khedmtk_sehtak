@@ -15,6 +15,7 @@ class StringManger{
   static const String phoneNumber = 'PhoneNumber ';
   static const String phone = 'Phone';
   static const String required= 'required';
+  static const String passwordShort= 'Password Short';
   static const String login= 'log in';
   static const String password= 'password';
   static const String changePassword= 'Change Current Password';
@@ -179,7 +180,9 @@ class StringManger{
   static const String region= 'Region';
   static const String booking= 'Booking';
   static const String thankYou= 'Thank You';
+
   static const String willBeContacted= 'You will be contacted within minutes';
+
 
 
 
