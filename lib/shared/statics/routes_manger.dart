@@ -218,6 +218,23 @@ class RoutesManger {
             builder: (_) => HospitalsNamesScreen(), settings: routeSettings);
 
 
+
+      case Routes.operationsScreen:
+        return CupertinoPageRoute(
+            builder: (_) =>  OperationsScreen(), settings: routeSettings);
+
+      case Routes.serviceProviderScreen:
+        return CupertinoPageRoute(
+            builder: (_) =>  ServiceProvider(), settings: routeSettings);
+
+      case Routes.bookHomeVisitScreen:
+        return CupertinoPageRoute(
+            builder: (_) =>  BookHomeVisitScreen(), settings: routeSettings);
+
+      case Routes.successBookHomeVisitScreen:
+        return CupertinoPageRoute(
+            builder: (_) => SuccessHomeVisitBooking(), settings: routeSettings);
+
     }
   }
 }

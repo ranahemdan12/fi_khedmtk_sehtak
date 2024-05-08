@@ -66,6 +66,100 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
 
+                    SizedBox(
+                      height: 90.h,
+                    ),
+                    Center(child: MainSignUpText()),
+                    SizedBox(
+                      height: 55.h,
+                    ),
+                    CustomSignupText(text: StringManger.fullName),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    CustomTextFormField(
+                        validate: (value) {
+                          if (value!.isEmpty) {
+                            return StringManger.required;
+                          } else {
+                            return null;
+                          }
+                        },
+                        keyboardType: TextInputType.text,
+                        textEditingController: fullNameController,
+                        hintText: StringManger.fullName),
+                    SizedBox(
+                      height: 16.h,
+                    ),
+                    CustomSignupText(text: StringManger.email),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    CustomTextFormField(
+                        validate: (value) {
+                          if (value!.isEmpty) {
+                            return StringManger.required;
+                          } else {
+                            return null;
+                          }
+                        },
+                        keyboardType: TextInputType.text,
+                        textEditingController: emailController,
+                        hintText: StringManger.email),
+                    SizedBox(
+                      height: 16.h,
+                    ),
+                    CustomSignupText(text: StringManger.phoneNumber),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    CustomTextFormField(
+                        validate: (value) {
+                          if (value!.isEmpty) {
+                            return StringManger.required;
+                          } else {
+                            return null;
+                          }
+                        },
+                        keyboardType: TextInputType.phone,
+                        textEditingController: phoneController,
+                        hintText: StringManger.phone),
+                    SizedBox(
+                      height: 16.h,
+                    ),
+                    CustomSignupText(text: StringManger.password),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    CustomTextFormField(
+                        validate: (value) {
+                          if (value!.isEmpty) {
+                            return StringManger.required;
+                          } else {
+                            return null;
+                          }
+                        },
+                        keyboardType: TextInputType.phone,
+                        textEditingController: passwordController,
+                        hintText: StringManger.password),
+                    SizedBox(
+                      height: 16.h,
+                    ),
+                    CustomButton(
+                        text: StringManger.signUp,
+                        onPressed: () {
+                          Navigator.pushNamed(
+                            context,
+                            Routes.mainScreen,
+                          );
+                        }),
+                    SizedBox(
+                      height: 16.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                       JoinText(),
                       SizedBox(
                         height: 70.h,
                       ),
