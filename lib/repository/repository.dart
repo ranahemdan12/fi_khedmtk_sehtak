@@ -1,3 +1,3 @@
-abstract class Repositry{
-  
+abstract class Repository {
+
 }

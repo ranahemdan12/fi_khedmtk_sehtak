@@ -143,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                        Positioned(
                          bottom: 0.h,
                          top: 785.h,
-                         child: SvgPicture.asset(AssetManger.loginLogo),
+                         child: Image.asset(AssetManger.loginLogo),
                        ),
                      ],
                    ),

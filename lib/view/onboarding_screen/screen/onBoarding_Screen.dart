@@ -16,12 +16,15 @@ class OnBoardingViewModel {
   final String title;
   final String subTitle;
   final String desc;
+  final bool skip;
+
 
   OnBoardingViewModel({
     required this.image,
     required this.title,
     required this.subTitle,
     required this.desc,
+    required this.skip
   });
 }
 
@@ -39,18 +42,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       title: StringManger.healthCareTitle,
       subTitle: StringManger.healthCareSubTitle,
       desc: StringManger.healthCareDesc,
+      skip: true
     ),
     OnBoardingViewModel(
       image: AssetManger.medicalFileIcon,
       title: StringManger.medicalFileTitle,
       subTitle: StringManger.medicalFileSubTitle,
       desc: StringManger.medicalFileDesc,
+      skip: true
     ),
     OnBoardingViewModel(
       image: AssetManger.onlineBookingIcon,
       title: StringManger.onlineBookingTitle,
       subTitle: StringManger.onlineBookingSubTitle,
       desc: StringManger.onlineBookingDesc,
+      skip: false
     ),
   ];
 
@@ -86,47 +92,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   itemBuilder: (context, index) => buildItem(pages[index]),
                 ),
               ),
-              SizedBox(
-                height: 99.h,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton(
-                      onPressed: () async {
-                        CacheHelper.saveData(key: 'onBoarding', value: true).then((value) => {
-                          if(value!){
 
-                            Navigator.pushNamedAndRemoveUntil(context, Routes.loginScreen, (route) => false),
-                          }
-                        });
-
-                      },
-                      child: Text(
-                        StringManger.skip,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w600,
-                          color: ColorManger.labelGrayColor,
-                        ),
-                      )),
-                  TextButton(
-                      onPressed: () {
-                        if(isLast){
-                          Navigator.pushNamed(context,Routes.loginScreen);
-                        }else{_controller.nextPage(duration:Duration(milliseconds: 750), curve: Curves.fastLinearToSlowEaseIn);}
-
-                      },
-                      child: Text(
-                        StringManger.next,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w600,
-                          color: ColorManger.blueColor,
-                        ),
-                      )),
-                ],
-              ),
             ],
           ),
         ),
@@ -190,6 +156,48 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               fontWeight: FontWeight.w500,
               color: ColorManger.greyBordColor,
             ),
+          ),
+          SizedBox(
+            height: 99.h,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+             pag.skip ?
+             TextButton(
+                  onPressed: () async {
+                    // PrefsHelper.saveData(key: 'onBoarding', value: true).then((value) => {
+                    //   if(value!){
+                    //
+                    Navigator.pushNamedAndRemoveUntil(context, Routes.loginScreen, (route) => false);
+                    //   }
+                    // });
+
+                  },
+                  child: Text(
+                    StringManger.skip,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w600,
+                      color: ColorManger.labelGrayColor,
+                    ),
+                  )):SizedBox(),
+              TextButton(
+                  onPressed: () {
+                    if(isLast){
+                      Navigator.pushNamed(context,Routes.loginScreen);
+                    }else{_controller.nextPage(duration:Duration(milliseconds: 750), curve: Curves.fastLinearToSlowEaseIn);}
+
+                  },
+                  child: Text(
+                    StringManger.next,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w600,
+                      color: ColorManger.blueColor,
+                    ),
+                  )),
+            ],
           ),
         ],
       );

@@ -14,7 +14,7 @@ class AssetManger{
   static const String scanIcon ='assets/images/scan.svg';
   static const String scansIcon ='assets/images/scans.svg';
   static const String serviceIcon ='assets/images/service_icon.svg';
-  static const String loginLogo ='assets/images/login_logo.svg';
+  static const String loginLogo ='assets/images/loginlogo.png';
   static const String medicalFileIcon ='assets/images/medical_file.svg';
   static const String onlineBookingIcon ='assets/images/online_booking.svg';
   static const String healthcareIcon ='assets/images/health_care.svg';
