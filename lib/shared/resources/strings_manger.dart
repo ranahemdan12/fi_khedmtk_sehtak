@@ -183,12 +183,6 @@ class StringManger{
 
   static const String willBeContacted= 'You will be contacted within minutes';
 
-  static const String specialization= 'Specialization';
-  static const String region= 'Region';
-  static const String booking= 'Booking';
-  static const String thankYou= 'Thank You';
-  static const String willBeContacted= 'You will be contacted within minutes';
-
 
 
 

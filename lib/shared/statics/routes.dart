@@ -42,9 +42,6 @@ class Routes {
   static const String bookHomeVisitScreen= "/bookHomeVisit";
   static const String successBookHomeVisitScreen= "/successBookHomeVisit";
   static const String hospitalsNamesScreen= "/hospitalsNames";
-  static const String serviceProviderScreen= "/serviceProvider";
-  static const String bookHomeVisitScreen= "/bookHomeVisit";
-  static const String successBookHomeVisitScreen= "/successBookHomeVisit";
 
 
 

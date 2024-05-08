@@ -248,16 +248,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                       ),
                     ]),
-                  ),
+                    Positioned(
+                      bottom: 0.h,
+                      top: 785.h,
+
+                      child: SvgPicture.asset(AssetManger.loginLogo),
+                    ),
+                  ]),
                 ),
               ),
-              Positioned(
-                bottom: 0.h,
-                top: 785.h,
 
-                child: SvgPicture.asset(AssetManger.loginLogo),
-              ),
-            ],
+              )],
           ),
         ),
       ),
