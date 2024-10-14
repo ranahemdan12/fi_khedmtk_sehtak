@@ -1,8 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import '../../../shared/resources/asset_manger.dart';
 import '../../../shared/resources/color_manger.dart';
 import '../../../shared/resources/strings_manger.dart';
@@ -14,7 +13,7 @@ class SendContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 84.h,
+      height: 68.h,
       width: 338.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
@@ -23,17 +22,13 @@ class SendContainer extends StatelessWidget {
       child: GestureDetector(
         onTap: (){Navigator.pushNamed(context, Routes.addPresScreen);},
         child: Padding(
-          padding: EdgeInsetsDirectional.only(start: 17),
+          padding:const EdgeInsetsDirectional.only(start: 17),
           child: Row(children: [
             SvgPicture.asset(AssetManger.pdfIcon),
-            SizedBox(width: 4.w,),
+            SizedBox(width: 8.w,),
             Text(
-              StringManger.SendPresc,
-              style: GoogleFonts.montserrat(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-                color:ColorManger.blueColor ,
-              ),),
+              StringManger.sendPresc.tr(),
+              style: Theme.of(context).textTheme.titleLarge),
           ],),
         ),
       ),

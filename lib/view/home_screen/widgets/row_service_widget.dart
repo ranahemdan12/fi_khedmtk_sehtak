@@ -1,9 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
-
-
 import '../../../shared/resources/strings_manger.dart';
-import '../../../shared/statics/routes.dart';
+
 
 
 
@@ -13,23 +11,15 @@ class RowServiceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsetsDirectional.symmetric(horizontal: 26),
+      padding: const EdgeInsetsDirectional.symmetric(horizontal: 26),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            StringManger.services,
+            StringManger.services.tr(),
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          GestureDetector(
-            onTap: (){
-              Navigator.pushNamed(context, Routes.serviceScreen);
-            },
-            child: Text(
-              StringManger.seeAll,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ),
+
 
         ],
       ),

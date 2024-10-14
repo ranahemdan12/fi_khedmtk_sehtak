@@ -1,55 +1,75 @@
+import 'package:fi_khedmtk_sehtak/shared/statics/navigation_service.dart';
+import 'package:fi_khedmtk_sehtak/view/labs/cubit/labs_services_cubit/labs_services_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../../../shared/resources/asset_manger.dart';
+import '../../../models/response/clinic/get_specialization/get_specialization.dart';
 import '../../../shared/resources/color_manger.dart';
-import '../../../shared/resources/strings_manger.dart';
+import '../../../shared/statics/enum.dart';
+import '../../../shared/statics/service_locator.dart';
 
-class ServiceRowItem extends StatelessWidget {
-   ServiceRowItem({Key? key,
 
-     required this.svgImage,
-     required this . text,}) : super(key: key);
+//ignore: must_be_immutable
+class ServiceRowItem extends StatefulWidget {
+    ServiceRowItem({Key? key, required this.serviceIcon, this.serviceType,this.model,
+      /*this.tab,*/required this.serviceText,required this.navToScreen, this.arguments}) : super(key: key);
 
-   final String text;
-   final String svgImage;
+  final String serviceIcon;
+  final String serviceText;
+
+  dynamic arguments;
+ String navToScreen;
+  ServiceType? serviceType;
+    SpecializationResponseModel? model;
+
+
 
   @override
+  State<ServiceRowItem> createState() => _ServiceRowItemState();
+}
+
+class _ServiceRowItemState extends State<ServiceRowItem> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 114.w,
-      height: 120.h,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          color: ColorManger.blueColor,
-          width: 2.w,
-        ),
-      ),
-      child: Padding(
-        padding:  EdgeInsetsDirectional.only(top: 13),
-        child: Center(
-          child: Column(
-            children: [
-              SvgPicture.asset(svgImage,
-                width: 50.w,
-                height: 50.h,),
-              SizedBox(height: 10.h,),
-              Text(text,
-                style: GoogleFonts.montserrat(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  color:ColorManger.blueColor ,
-                ),
-              ),
+    return  GestureDetector(
+          onTap: (){
+            // RegionCubit.get(context).selectedTab=widget.tab;
+            widget.serviceType!=null?{
+              LabsServicesCubit.get(context).serviceType=widget.serviceType,}:{};
 
-            ],
+           widget.model?.isDentist==true?{
+
+
+           }:{};
+
+
+            sl<NavigationService>().navigateTo(widget.navToScreen,arguments: widget.arguments);
+          },
+          child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: ColorManger.blueColor,
+              width: 2.w,
+            ),
           ),
-        ),
-      ),
-
-    );
+          child: Center(
+            child: Column(
+              children: [
+                const SizedBox(height: 21,),
+                SvgPicture.asset(widget.serviceIcon,
+                  width: 50.w,
+                  height: 50.h,
+                  fit: BoxFit.cover,),
+                SizedBox(height: 8.h,),
+                Text(widget.serviceText,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.bodyMedium
+                ),
+              ],
+            ),
+          ),
+          ));
   }
 }
